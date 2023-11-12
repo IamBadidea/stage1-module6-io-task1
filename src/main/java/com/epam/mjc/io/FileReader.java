@@ -8,11 +8,6 @@ import java.io.IOException;
 
 public class FileReader {
 
-    public static void main(String[] args) {
-        FileReader fl = new FileReader();
-        System.out.println(fl.getDataFromFile(new File("src\\main\\resources\\Profile.txt")).toString());
-    }
-
     public Profile getDataFromFile(File file) {
         StringBuilder profileData = new StringBuilder();
         try {
@@ -22,8 +17,6 @@ public class FileReader {
                 profileData.append((char) i);
             }
             stream.close();
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
