@@ -18,7 +18,7 @@ public class FileReader {
             }
             stream.close();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new FileReaderException("Problem with read file!");
         }
 
         String string = profileData.toString();
