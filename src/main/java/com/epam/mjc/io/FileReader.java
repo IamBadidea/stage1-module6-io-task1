@@ -29,14 +29,12 @@ public class FileReader {
             profileFields[i] = tempArray[1];
         }
 
-        Profile profile = new Profile(
-                                        profileFields[0],
-                                        Integer.parseInt(profileFields[1]),
-                                        profileFields[2],
-                                        Long.parseLong(profileFields[3])
+        return new Profile(
+                profileFields[0],
+                Integer.parseInt(profileFields[1]),
+                profileFields[2],
+                Long.parseLong(profileFields[3])
         );
-
-        return profile;
     }
 
 }
